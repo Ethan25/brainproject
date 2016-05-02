@@ -1,0 +1,42 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "com.unarin.cordova.beacon": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-estimote": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        }
+    },
+    "dependent_plugins": {}
+}
