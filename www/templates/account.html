@@ -1,0 +1,12 @@
+﻿<ion-view view-title="Account">
+    <ion-content>
+        <div ng-if="loading()" style="position: absolute; top: 50%; left: 50%;">
+            <ion-spinner></ion-spinner>
+        </div>
+        <div class="container roboto-black">
+            <ion-item ng-click="resetAccount()">
+                RESET ACCOUNT
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

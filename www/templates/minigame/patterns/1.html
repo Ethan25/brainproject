@@ -1,0 +1,43 @@
+﻿<ion-view view-title="Multiplication Fun!">
+    <ion-content>
+        <div ng-if="loading()" style="position: absolute; top: 50%; left: 50%;">
+            <ion-spinner></ion-spinner>
+        </div>
+        <div ng-if="showInstructions()" class="animated slideInRight container roboto-black" align="center">
+            <ion-item style="white-space:normal">
+                Every number but one has a common multiple! Which on is it? You will have 10 seconds!
+            </ion-item>
+            <ion-item ng-click="showProblem()">
+                START
+            </ion-item>
+        </div>
+        <div ng-if="showGame()" class="animated bounceInUp container roboto-medium" align="center">
+            <ion-item>
+                Time: {{countdown}}s
+            </ion-item>
+            <ion-item ng-click="checkAnswer(num1)">
+                {{num1}}
+            </ion-item>
+            <ion-item ng-click="checkAnswer(num2)">
+                {{num2}}
+            </ion-item>
+            <ion-item ng-click="checkAnswer(num3)">
+                {{num3}}
+            </ion-item>
+            <ion-item ng-click="checkAnswer(num4)">
+                {{num4}}
+            </ion-item>
+        </div>
+        <div ng-if="showResults()" class="animated slideInRight container roboto-medium" align="center">
+            <ion-item>
+                Your Answer: {{yourAnswer}}
+            </ion-item>
+            <ion-item>
+                Correct Answer: {{correctAnswer}}
+            </ion-item>
+            <ion-item ng-click="returnToDetect()">
+                RETURN
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

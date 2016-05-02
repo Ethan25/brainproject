@@ -1,0 +1,14 @@
+<ion-view view-title="Brains" >
+  <ion-content>
+      <div ng-if="loading()" style="position: absolute; top: 50%; left: 50%;">
+          <ion-spinner></ion-spinner>
+      </div>
+      <div ng-if="!loading()" class="animated bounceInUp">
+          <ion-list>
+              <ion-item ng-repeat="brain in brains" href="#/app/brains/{{brain}}">
+                  {{brain.title}}
+              </ion-item>
+          </ion-list>
+      </div>
+  </ion-content>
+</ion-view>

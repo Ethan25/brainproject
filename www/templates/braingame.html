@@ -1,0 +1,46 @@
+<ion-view view-title="Brain Game">
+  <ion-content>
+
+        <div id="headerImage" align="center">
+            <img src="http://i.imgur.com/jQQvYOi.png" />
+        </div>
+
+        <div id="menu" ng-if="showMenu()" class="container animated bounceInUp bounceOutUp" align="center">
+            <div class="container">
+                <ion-item ng-click="refresh()">
+                    {{brainName}}
+                </ion-item>
+            </div>
+            <div class="row roboto-medium">
+                <div class="col" align="center">
+                    <ion-item ng-click="patterns()">
+                        PATTERNS
+                    </ion-item>
+                </div>
+                <div class="col" align="center">
+                    <ion-item ng-click="memory()">
+                        MEMORY
+                    </ion-item>
+                </div>
+            </div>
+            <div class="row roboto-medium">
+                <div class="col" align="center">
+                    <ion-item ng-click="cognition()">
+                        COGNITION
+                    </ion-item>
+                </div>
+                <div class="col" align="center">
+                    <ion-item ng-click="reflex()">
+                        REFLEX
+                    </ion-item>
+                </div>
+            </div>            
+        </div>
+
+        <div id="detect" ng-if="showDetect()" class="container animated bounceInRight bounceOutRight" align="center">
+            <ion-item ng-click="detect()">
+                DETECT
+            </ion-item>
+        </div>
+  </ion-content>
+</ion-view>

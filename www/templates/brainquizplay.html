@@ -1,0 +1,66 @@
+﻿<ion-view view-title="PLAY">
+    <ion-content>
+        <div ng-if="showAnswer()" class="container animated bounceInUp">
+            <ion-list align="center">
+                <ion-item style="white-space:normal">
+                    <b>YOUR ANSWER:</b> <br/>{{yourAnswer}}
+                </ion-item>
+                <ion-item style="white-space:normal">
+                    <b>CORRECT ANSWER:</b> <br />{{correctAnswer}}
+                </ion-item>
+                <ion-item ng-click="dismissResults()">
+                    <b>NEXT QUESTION</b>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-if="showQuestion()" class="container animated bounceInRight">
+            <ion-list align="center">
+                <ion-item style="white-space:normal">
+                    <b>{{question}}</b>
+                </ion-item>
+                <ion-item ng-click="nextQuestion(option1)" style="white-space:normal">
+                    {{option1}}
+                </ion-item>
+                <ion-item ng-click="nextQuestion(option2)" style="white-space:normal">
+                    {{option2}}
+                </ion-item>
+                <ion-item ng-click="nextQuestion(option3)" style="white-space:normal">
+                    {{option3}}
+                </ion-item>
+                <ion-item ng-click="nextQuestion(option4)" style="white-space:normal">
+                    {{option4}}
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-if="showResults()" class="container animated bounceInRight">
+            <div align="center">
+                <ion-item ng-click="showOrHideResults()" style="white-space:normal">
+                    <b>{{showhideresults}}</b>
+                </ion-item>
+            </div>
+            
+            <ion-item style="white-space:normal">
+                <b>Correct: </b>{{correct}}
+            </ion-item>
+            <ion-item style="white-space:normal">
+                <b>Incorrect: </b>{{incorrect}}
+            </ion-item>
+            <div align="center">
+                <ion-item ng-click="shareViaFacebook()" style="white-space:normal; background-color:rgb(59,89,152); color:white">
+                    SHARE VIA FACEBOOK
+                </ion-item>
+                <ion-item ng-click="shareViaTwitter()" style="white-space:normal; background-color:rgb(29,202,255); color:white">
+                    SHARE VIA TWITTER
+                </ion-item>
+            </div>
+            <div ng-if="showResultsList()" class="animated slideInUp">
+                <ion-list>
+                    <ion-item ng-repeat="result in results" style="white-space:normal; background-color:{{result.color}};">
+                        <b>Your Answer: </b>{{result.yourAnswer}}<br /><br />
+                        <b>Correct Answer: </b>{{result.correctAnswer}}
+                    </ion-item>
+                </ion-list>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

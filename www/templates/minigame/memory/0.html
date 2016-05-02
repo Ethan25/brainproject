@@ -1,0 +1,61 @@
+﻿<ion-view view-title="Simon Says">
+    <ion-content>
+        <div ng-if="loading()" style="position: absolute; top: 50%; left: 50%;">
+            <ion-spinner></ion-spinner>
+        </div>
+        <div ng-if="showInstructions()" class="animated slideInRight container roboto-black" align="center">
+            <ion-item style="white-space:normal">
+                Buttons will light up! Your job is to mimic the buttons that light up once the timer begins! Good luck!
+            </ion-item>
+            <ion-item ng-click="showProblem()">
+                START
+            </ion-item>
+        </div>
+        <div ng-if="showGame()" class="animated bounceInUp container roboto-medium" align="center">
+            <ion-item>
+                Time: {{countdown}}s
+            </ion-item>
+            <div class="row roboto-medium">
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color0}}" ng-click="changeColor(0)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color1}}" ng-click="changeColor(1)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color2}}" ng-click="changeColor(2)"/>
+                </div>
+            </div>
+            <div class="row roboto-medium">
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color3}}" ng-click="changeColor(3)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color4}}" ng-click="changeColor(4)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color5}}" ng-click="changeColor(5)"/>
+                </div>
+            </div>
+            <div class="row roboto-medium">
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color6}}" ng-click="changeColor(6)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color7}}" ng-click="changeColor(7)"/>
+                </div>
+                <div class="col" align="center">
+                    <ion-item style="background-color:{{color8}}" ng-click="changeColor(8)"/>
+                </div>
+            </div> 
+        </div>
+        <div ng-if="showResults()" class="animated slideInRight container roboto-medium" align="center">
+            <ion-item>
+                {{answer}}
+            </ion-item>
+            <ion-item ng-click="returnToDetect()">
+                RETURN
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>
