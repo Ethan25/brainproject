@@ -7,10 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "com.unarin.cordova.beacon": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
         "cordova-plugin-console": {
             "PACKAGE_NAME": "com.scheibapps.brainproject"
         },
         "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.scheibapps.brainproject"
+        },
+        "cordova-plugin-estimote": {
             "PACKAGE_NAME": "com.scheibapps.brainproject"
         },
         "cordova-plugin-geolocation": {
@@ -29,12 +35,6 @@
             "PACKAGE_NAME": "com.scheibapps.brainproject"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.scheibapps.brainproject"
-        },
-        "com.unarin.cordova.beacon": {
-            "PACKAGE_NAME": "com.scheibapps.brainproject"
-        },
-        "cordova-plugin-estimote": {
             "PACKAGE_NAME": "com.scheibapps.brainproject"
         }
     },
